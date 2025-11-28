@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind UI Component Library</title>
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="bg-[#FAFAF8] text-gray-800">
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+  <nav class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+    
+    <!-- Brand -->
+    <a href="index.html" class="text-2xl font-semibold text-[#1E40AF]">UI Kit</a>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex items-center space-x-8 font-medium">
+
+      <!-- Home dropdown -->
+      <li class="relative group">
+        <button class="flex items-center space-x-1 hover:text-[#1E40AF] transition">
+          <span>Home</span>
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </button>
+
+        <!-- Dropdown -->
+        <div class="absolute left-0 mt-3 bg-white shadow-lg rounded-lg p-4 w-48 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition">
+          <a href="#hero" class="block py-2 hover:text-[#1E40AF]">Hero Section</a>
+          <a href="#about" class="block py-2 hover:text-[#1E40AF]">About Section</a>
+          <a href="#features" class="block py-2 hover:text-[#1E40AF]">Featured Blocks</a>
+          <a href="#components" class="block py-2 hover:text-[#1E40AF]">Components</a>
+        </div>
+      </li>
+
+      <!-- Components Dropdown -->
+      <li class="relative group">
+        <button class="flex items-center space-x-1 hover:text-[#1E40AF] transition">
+          <span>Components</span>
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </button>
+
+        <div class="absolute left-0 mt-3 bg-white shadow-lg rounded-lg p-4 w-56 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition">
+          <a href="components/buttons.html" class="block py-2 hover:text-[#1E40AF]">Buttons</a>
+          <a href="components/cards.html" class="block py-2 hover:text-[#1E40AF]">Cards</a>
+          <a href="components/navigation.html" class="block py-2 hover:text-[#1E40AF]">Navigation Bars</a>
+          <a href="components/forms.html" class="block py-2 hover:text-[#1E40AF]">Forms</a>
+          <a href="components/modals.html" class="block py-2 hover:text-[#1E40AF]">Modals</a>
+          <a href="components/utilities.html" class="block py-2 hover:text-[#1E40AF]">Utilities</a>
+        </div>
+      </li>
+
+      <!-- Sections Dropdown -->
+      <li class="relative group">
+        <button class="flex items-center space-x-1 hover:text-[#1E40AF] transition">
+          <span>Sections</span>
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </button>
+
+        <div class="absolute left-0 mt-3 bg-white shadow-lg rounded-lg p-4 w-56 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition">
+          <a href="components/hero-sections.html" class="block py-2 hover:text-[#1E40AF]">Hero Sections</a>
+          <a href="components/pricing.html" class="block py-2 hover:text-[#1E40AF]">Pricing Tables</a>
+          <a href="components/testimonials.html" class="block py-2 hover:text-[#1E40AF]">Testimonials</a>
+          <a href="components/portfolio.html" class="block py-2 hover:text-[#1E40AF]">Portfolio</a>
+          <a href="components/sections.html" class="block py-2 hover:text-[#1E40AF]">More Sections</a>
+        </div>
+      </li>
+
+      <li>
+        <a href="components/utilities.html" class="hover:text-[#1E40AF]">Utilities</a>
+      </li>
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobileMenuBtn" class="md:hidden text-2xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg">
+    <ul class="flex flex-col p-6 space-y-4 text-lg">
+      <a href="#hero" class="hover:text-[#1E40AF]">Hero</a>
+      <a href="#about" class="hover:text-[#1E40AF]">About</a>
+      <a href="#features" class="hover:text-[#1E40AF]">Features</a>
+      <a href="#components" class="hover:text-[#1E40AF]">Components</a>
+    </ul>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero" class="pt-40 pb-32">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center">
+
+    <div>
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+        Build Beautiful Interfaces Faster
+      </h1>
+      <p class="mt-6 text-lg text-gray-600">
+        A curated collection of professional, reusable, and modern Tailwind CSS components
+        designed for developers, freelancers, and clients.
+      </p>
+
+      <div class="flex gap-4 mt-8">
+        <a href="components/buttons.html"
+           class="px-6 py-3 bg-[#1E40AF] text-white rounded-md shadow hover:bg-blue-700 transition">
+          Explore Components
+        </a>
+        <a href="components/utilities.html"
+           class="px-6 py-3 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-100 transition">
+          View Utilities
+        </a>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <img src="assets/img/ui-preview.png" alt="UI Components"
+           class="rounded-2xl shadow-xl w-full max-w-md">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT SECTION ===================== -->
+<section id="about" class="py-24 bg-[#FAFAF8]">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-14 items-center">
+
+    <div class="flex justify-center">
+      <img src="assets/img/about-preview.png" alt="About UI Kit"
+           class="rounded-2xl shadow-lg w-full max-w-md object-cover">
+    </div>
+
+    <div>
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900">About This UI Kit</h2>
+      <p class="text-gray-600 mt-6 leading-relaxed">
+        This Tailwind CSS UI Kit is built to help developers and freelancers build modern,
+        clean, and reusable interfaces faster. Every component follows a consistent style,
+        spacing scale, and utility-first build approach.
+      </p>
+      <p class="text-gray-600 mt-4 leading-relaxed">
+        Whether you're creating landing pages, portfolios, SaaS dashboards, or product sites,
+        this kit provides everything you need to accelerate your workflow.
+      </p>
+
+      <div class="mt-8 flex gap-4">
+        <a href="components/sections.html"
+           class="px-6 py-3 bg-[#1E40AF] text-white rounded-md shadow hover:bg-blue-700 transition">
+          View Sections
+        </a>
+        <a href="components/cards.html"
+           class="px-6 py-3 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-100 transition">
+          View Cards
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== FEATURE PREVIEW ===================== -->
+<section id="features" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+
+    <h2 class="text-4xl font-bold">Explore Component Categories</h2>
+    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+      Start building with professionally designed, production-ready Tailwind CSS components.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-10 mt-16">
+
+      <a href="components/buttons.html" class="p-8 bg-[#FAFAFA] rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition block text-center">
+        <i class="fa-solid fa-square-plus text-4xl text-[#1E40AF] mb-4"></i>
+        <h3 class="text-xl font-semibold">Buttons</h3>
+        <p class="text-gray-600 mt-2">Primary, outline, ghost, icon buttons.</p>
+      </a>
+
+      <a href="components/cards.html" class="p-8 bg-[#FAFAFA] rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition block text-center">
+        <i class="fa-solid fa-clone text-4xl text-[#1E40AF] mb-4"></i>
+        <h3 class="text-xl font-semibold">Cards</h3>
+        <p class="text-gray-600 mt-2">Project cards, image cards, feature cards.</p>
+      </a>
+
+      <a href="components/modals.html" class="p-8 bg-[#FAFAFA] rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition block text-center">
+        <i class="fa-solid fa-rectangle-list text-4xl text-[#1E40AF] mb-4"></i>
+        <h3 class="text-xl font-semibold">Modals</h3>
+        <p class="text-gray-600 mt-2">Popup modals with overlays & transitions.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMPONENTS OVERVIEW ===================== -->
+<section id="components" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+
+    <h2 class="text-4xl font-bold">Popular UI Components</h2>
+    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+      Clean, modern, and production-ready Tailwind components for everyday projects.
+    </p>
+
+    <div class="grid md:grid-cols-4 gap-10 mt-16">
+
+      <a href="components/buttons.html"
+         class="p-6 bg-[#FAFAFA] rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition block text-center">
+        <i class="fa-solid fa-hand-pointer text-3xl text-[#1E40AF] mb-3"></i>
+        <h3 class="text-xl font-semibold">Buttons</h3>
+        <p class="text-gray-600 text-sm mt-2">Solid, outline, ghost, icon variations.</p>
+      </a>
+
+      <a href="components/cards.html"
+         class="p-6 bg-[#FAFAFA] rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition block text-center">
+        <i class="fa-solid fa-layer-group text-3xl text-[#1E40AF] mb-3"></i>
+        <h3 class="text-xl font-semibold">Cards</h3>
+        <p class="text-gray-600 text-sm mt-2">Project, feature, team, pricing cards.</p>
+      </a>
+
+      <a href="components/navigation.html"
+         class="p-6 bg-[#FAFAFA] rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition block text-center">
+        <i class="fa-solid fa-bars-progress text-3xl text-[#1E40AF] mb-3"></i>
+        <h3 class="text-xl font-semibold">Navigation</h3>
+        <p class="text-gray-600 text-sm mt-2">Navbars, mobile menus, sidebars.</p>
+      </a>
+
+      <a href="components/modals.html"
+         class="p-6 bg-[#FAFAFA] rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition block text-center">
+        <i class="fa-solid fa-window-maximize text-3xl text-[#1E40AF] mb-3"></i>
+        <h3 class="text-xl font-semibold">Modals</h3>
+        <p class="text-gray-600 text-sm mt-2">Centered modals, confirmation boxes.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CALL TO ACTION ===================== -->
+<section class="py-24 bg-[#1E40AF] text-white text-center">
+  <h2 class="text-4xl font-bold">Start Using the UI Kit Today</h2>
+  <p class="mt-4 text-white/80 max-w-2xl mx-auto">
+    Save time, impress clients, and elevate your freelancing profile with premium UI components.
+  </p>
+
+  <a href="components/hero-sections.html"
+     class="inline-block mt-8 px-10 py-4 bg-white text-[#1E40AF] rounded-lg shadow hover:shadow-md hover:-translate-y-1 transition font-medium">
+    Browse All Components
+  </a>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="py-10 bg-white border-t border-gray-200 text-center">
+  <p class="text-gray-600">&copy; <span id="year"></span> UI Component Library. All rights reserved.</p>
+</footer>
+
+<!-- ===================== JS ===================== -->
+<script src="assets/script.js"></script>
+
+</body>
+</html>

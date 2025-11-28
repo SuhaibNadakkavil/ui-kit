@@ -1,0 +1,125 @@
+/* Smooth transitions */
+.component-hover {
+  transition: all 0.25s ease;
+}
+
+/* Code preview styling (future component pages) */
+.code-block {
+  background: #1E1E1E;
+  color: #fff;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+}
+
+/* Dropdown animation */
+.dropdown-transition {
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+/* Card shadows */
+.card-base {
+  @apply bg-white rounded-xl shadow-sm p-8;
+}
+
+/* Smooth hover animation */
+.hover-lift {
+  transition: all .25s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* Navigation Hover Transition */
+.nav-hover {
+  transition: all .25s ease;
+}
+.nav-hover:hover {
+  color: #1E40AF;
+}
+
+/* Sidebar hover */
+.sidebar-item {
+  @apply flex items-center gap-3 p-3 rounded-md cursor-pointer;
+}
+.sidebar-item:hover {
+  background: #f3f4f6;
+}
+
+/* Floating label input UX */
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  color: #1E40AF;
+}
+
+/* Smooth transitions for form controls */
+input, textarea, select {
+  transition: all 0.25s ease;
+}
+
+
+/* Modal Animations */
+.modal-overlay {
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+.animate-slide-up {
+  animation: slideUp 0.35s ease;
+}
+
+/* Smooth hover + scale */
+.hero-card:hover {
+  transform: translateY(-6px);
+  transition: all .3s ease;
+}
+.hero-img {
+  transition: transform .4s ease;
+}
+.hero-img:hover {
+  transform: scale(1.05);
+}
+
+/* Hover lift effect for pricing cards */
+.pricing-card:hover {
+  transform: translateY(-6px);
+  transition: all 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Hover animation for testimonial cards */
+.testimonial-hover:hover {
+  transform: translateY(-6px);
+  transition: all .3s ease;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Image hover scale */
+.portfolio-hover img {
+  transition: transform .4s ease;
+}
+.portfolio-hover:hover img {
+  transform: scale(1.05);
+}
+
+/* Card hover lift */
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  transition: all .3s ease;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.08);
+}
+
+/* Transition utility */
+.utility-transition {
+  transition: all .3s ease;
+}

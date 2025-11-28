@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms – UI Component Library</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body class="bg-[#FAFAF8] text-gray-800">
+
+
+
+<!-- ========================================================= -->
+<!-- NAVBAR -->
+<!-- ========================================================= -->
+<header class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+  <nav class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+
+    <a href="../index.html" class="text-2xl font-semibold text-[#1E40AF]">UI Kit</a>
+
+    <!-- Desktop Nav -->
+    <ul class="hidden md:flex items-center space-x-8 font-medium">
+
+      <li class="relative group">
+        <button class="flex items-center hover:text-[#1E40AF] transition">
+          Components <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+        </button>
+
+        <div
+          class="absolute left-0 mt-3 bg-white p-4 w-56 rounded-lg shadow-lg opacity-0 invisible
+                 group-hover:opacity-100 group-hover:visible transition">
+          <a href="buttons.html" class="block py-2 hover:text-[#1E40AF]">Buttons</a>
+          <a href="cards.html" class="block py-2 hover:text-[#1E40AF]">Cards</a>
+          <a href="navigation.html" class="block py-2 hover:text-[#1E40AF]">Navigation</a>
+          <a href="forms.html" class="block py-2 hover:text-[#1E40AF]">Forms</a>
+          <a href="modals.html" class="block py-2 hover:text-[#1E40AF]">Modals</a>
+          <a href="utilities.html" class="block py-2 hover:text-[#1E40AF]">Utilities</a>
+        </div>
+      </li>
+
+      <li>
+        <a href="../index.html#components" class="hover:text-[#1E40AF]">Sections</a>
+      </li>
+    </ul>
+
+    <!-- Mobile button -->
+    <button id="mobileMenuBtn" class="md:hidden text-2xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg">
+    <ul class="flex flex-col p-6 space-y-4 text-lg">
+      <a href="../index.html">Home</a>
+      <a href="buttons.html">Buttons</a>
+      <a href="cards.html">Cards</a>
+      <a href="navigation.html">Navigation</a>
+      <a href="forms.html">Forms</a>
+      <a href="modals.html">Modals</a>
+    </ul>
+  </div>
+</header>
+
+<!-- Spacer under nav -->
+<div class="h-24"></div>
+
+
+
+<!-- ========================================================= -->
+<!-- PAGE HEADER -->
+<!-- ========================================================= -->
+<section class="text-center py-14">
+  <h1 class="text-5xl font-bold">Forms</h1>
+  <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
+    Professional Tailwind CSS form elements including input fields, form groups, validation, login forms,
+    subscription forms, and more.
+  </p>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- MAIN WRAPPER -->
+<!-- ========================================================= -->
+<div class="max-w-7xl mx-auto px-6 md:px-12 pb-28 space-y-20">
+
+
+<!-- ========================================================= -->
+<!-- 1. BASIC INPUTS -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Basic Inputs</h2>
+
+  <div class="bg-white p-8 rounded-xl shadow-sm max-w-lg">
+    <label class="block font-medium mb-2">Name</label>
+    <input
+      type="text"
+      class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-[#1E40AF]"
+      placeholder="Enter your name">
+  </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- 2. INPUT WITH ICON -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Input With Icon</h2>
+
+  <div class="bg-white p-8 rounded-xl shadow-sm max-w-lg space-y-6">
+
+    <!-- Left Icon -->
+    <div class="flex items-center border border-gray-300 rounded-md px-4 py-2">
+      <i class="fa-solid fa-user text-gray-500"></i>
+      <input
+        type="text"
+        class="ml-3 flex-1 focus:outline-none"
+        placeholder="Username">
+    </div>
+
+    <!-- Right Icon -->
+    <div class="relative">
+      <input type="password"
+             class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-[#1E40AF]"
+             placeholder="Password">
+
+      <i class="fa-solid fa-eye absolute top-3 right-4 text-gray-500"></i>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- 3. FLOATING LABEL INPUT -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Floating Label Input</h2>
+
+  <div class="bg-white p-8 rounded-xl shadow-sm max-w-lg">
+
+    <div class="relative w-full">
+      <input type="text"
+             class="peer w-full border border-gray-300 rounded-md px-4 py-3 placeholder-transparent focus:outline-[#1E40AF]"
+             placeholder="Full Name">
+
+      <label class="absolute left-4 top-3 text-gray-500 transition-all
+                    peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
+                    peer-focus:top-[-10px] peer-focus:text-xs peer-focus:text-[#1E40AF]">
+        Full Name
+      </label>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- 4. TEXTAREA -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Textarea</h2>
+
+  <div class="bg-white p-8 rounded-xl shadow-sm max-w-lg">
+    <textarea
+      rows="5"
+      class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-[#1E40AF]"
+      placeholder="Write your message..."></textarea>
+  </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- 5. SELECT DROPDOWN -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Select Dropdown</h2>
+
+  <div class="bg-white p-8 rounded-xl shadow-sm max-w-lg">
+
+    <select
+      class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-[#1E40AF]">
+      <option>Select Category</option>
+      <option>Web Development</option>
+      <option>UI/UX Design</option>
+      <option>Freelancing</option>
+    </select>
+
+  </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- 6. CHECKBOXES -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Checkboxes</h2>
+
+  <div class="bg-white p-8 rounded-xl shadow-sm max-w-lg space-y-3">
+
+    <label class="flex items-center gap-3">
+      <input type="checkbox" class="w-5 h-5">
+      <span>Remember Me</span>
+    </label>
+
+    <label class="flex items-center gap-3">
+      <input type="checkbox" class="w-5 h-5">
+      <span>Subscribe to Newsletter</span>
+    </label>
+
+  </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- 7. RADIO BUTTONS -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Radio Buttons</h2>
+
+  <div class="bg-white p-8 rounded-xl shadow-sm max-w-lg space-y-3">
+
+    <label class="flex items-center gap-3">
+      <input type="radio" name="gender" class="w-5 h-5">
+      <span>Male</span>
+    </label>
+
+    <label class="flex items-center gap-3">
+      <input type="radio" name="gender" class="w-5 h-5">
+      <span>Female</span>
+    </label>
+
+  </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- 8. TOGGLE SWITCH -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Toggle Switch</h2>
+
+  <div class="bg-white p-8 rounded-xl shadow-sm max-w-lg">
+
+    <label class="flex items-center gap-3 cursor-pointer">
+
+      <div class="relative">
+        <input type="checkbox" class="peer hidden">
+        <div class="w-12 h-6 rounded-full bg-gray-300 peer-checked:bg-[#1E40AF] transition"></div>
+        <div class="absolute top-0 left-0 w-6 h-6 bg-white rounded-full shadow peer-checked:translate-x-6 transition"></div>
+      </div>
+
+      <span class="text-gray-700">Enable Notifications</span>
+
+    </label>
+
+  </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- 9. FORM GROUP -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Form Group</h2>
+
+  <div class="bg-white p-8 rounded-xl shadow-sm max-w-xl space-y-5">
+
+    <div>
+      <label class="font-medium">Full Name</label>
+      <input type="text"
+             class="w-full mt-2 border border-gray-300 rounded-md px-4 py-2 focus:outline-[#1E40AF]">
+    </div>
+
+    <div>
+      <label class="font-medium">Email</label>
+      <input type="email"
+             class="w-full mt-2 border border-gray-300 rounded-md px-4 py-2 focus:outline-[#1E40AF]">
+    </div>
+
+    <div>
+      <label class="font-medium">Message</label>
+      <textarea rows="4"
+                class="w-full mt-2 border border-gray-300 rounded-md px-4 py-2 focus:outline-[#1E40AF]"></textarea>
+    </div>
+
+    <button class="px-6 py-3 bg-[#1E40AF] text-white rounded-md hover:bg-blue-700 transition">
+      Submit
+    </button>
+
+  </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- 10. INLINE FORM -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Inline Form</h2>
+
+  <div class="bg-white p-8 rounded-xl shadow-sm max-w-xl flex items-center gap-4">
+    <input type="email"
+           class="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-[#1E40AF]"
+           placeholder="Your email">
+    <button class="px-6 py-3 bg-[#1E40AF] text-white rounded-md hover:bg-blue-700 transition">
+      Submit
+    </button>
+  </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- 11. LOGIN FORM -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Login Form</h2>
+
+  <div class="bg-white p-8 rounded-xl shadow-sm max-w-md mx-auto space-y-5">
+
+    <h3 class="text-2xl font-semibold text-center">Login</h3>
+
+    <input type="email"
+           class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-[#1E40AF]"
+           placeholder="Email">
+
+    <input type="password"
+           class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-[#1E40AF]"
+           placeholder="Password">
+
+    <button class="w-full px-6 py-3 bg-[#1E40AF] text-white rounded-md hover:bg-blue-700 transition">
+      Login
+    </button>
+
+  </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- 12. SIGNUP FORM -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Signup Form</h2>
+
+  <div class="bg-white p-8 rounded-xl shadow-sm max-w-md mx-auto space-y-5">
+
+    <h3 class="text-2xl font-semibold text-center">Create Account</h3>
+
+    <input type="text"
+           class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-[#1E40AF]"
+           placeholder="Full Name">
+
+    <input type="email"
+           class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-[#1E40AF]"
+           placeholder="Email">
+
+    <input type="password"
+           class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-[#1E40AF]"
+           placeholder="Password">
+
+    <button class="w-full px-6 py-3 bg-[#1E40AF] text-white rounded-md hover:bg-blue-700 transition">
+      Sign Up
+    </button>
+
+  </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- 13. NEWSLETTER FORM -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Newsletter Subscription</h2>
+
+  <div class="bg-white p-8 rounded-xl shadow-sm max-w-xl flex flex-col md:flex-row items-center gap-4">
+    <input type="email"
+           class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-[#1E40AF]"
+           placeholder="Your Email">
+    <button class="px-6 py-3 bg-[#1E40AF] text-white rounded-md hover:bg-blue-700 transition">
+      Subscribe
+    </button>
+  </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- 14. SEARCH FORM -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Search Bar</h2>
+
+  <div class="bg-white p-8 rounded-xl shadow-sm max-w-xl flex items-center gap-3">
+    <i class="fa-solid fa-magnifying-glass text-gray-500 text-lg"></i>
+    <input type="text"
+           class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-[#1E40AF]"
+           placeholder="Search here...">
+  </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- 15. FORM VALIDATION STATES -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Validation States</h2>
+
+  <div class="bg-white p-8 rounded-xl shadow-sm max-w-lg space-y-5">
+
+    <!-- Success -->
+    <div>
+      <label class="font-medium">Success State</label>
+      <input type="text"
+             class="w-full mt-2 border border-green-600 rounded-md px-4 py-2">
+      <p class="mt-1 text-green-600 text-sm">Looks good!</p>
+    </div>
+
+    <!-- Error -->
+    <div>
+      <label class="font-medium">Error State</label>
+      <input type="text"
+             class="w-full mt-2 border border-red-600 rounded-md px-4 py-2">
+      <p class="mt-1 text-red-600 text-sm">This field is required.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- 16. DISABLED INPUT -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Disabled Input</h2>
+
+  <div class="bg-white p-8 rounded-xl shadow-sm max-w-lg">
+    <input
+      type="text"
+      disabled
+      class="w-full border border-gray-300 bg-gray-100 text-gray-500 rounded-md px-4 py-2 cursor-not-allowed"
+      placeholder="Disabled input">
+  </div>
+</section>
+
+
+
+</div> <!-- END WRAPPER -->
+
+
+
+<!-- ========================================================= -->
+<!-- FOOTER -->
+<!-- ========================================================= -->
+<footer class="py-10 bg-white border-t border-gray-200 text-center">
+  <p class="text-gray-600">
+    &copy; <span id="year"></span> UI Component Library. All rights reserved.
+  </p>
+</footer>
+
+
+<!-- JS -->
+<script src="../assets/script.js"></script>
+
+</body>
+</html>

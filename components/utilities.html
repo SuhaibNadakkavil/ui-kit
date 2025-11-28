@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utilities – UI Component Library</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+
+<body class="bg-[#FAFAF8] text-gray-800">
+
+
+
+<!-- ========================================================= -->
+<!-- NAVBAR -->
+<!-- ========================================================= -->
+<header class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+  <nav class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+
+    <a href="../index.html" class="text-2xl font-semibold text-[#1E40AF]">UI Kit</a>
+
+    <ul class="hidden md:flex items-center space-x-8 font-medium">
+      <li class="relative group">
+        <button class="flex items-center hover:text-[#1E40AF] transition">
+          Components <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+        </button>
+
+        <div
+          class="absolute left-0 mt-3 bg-white p-4 w-56 rounded-lg shadow-lg opacity-0 invisible
+                 group-hover:opacity-100 group-hover:visible transition">
+
+          <a href="buttons.html" class="block py-2 hover:text-[#1E40AF]">Buttons</a>
+          <a href="cards.html" class="block py-2 hover:text-[#1E40AF]">Cards</a>
+          <a href="navigation.html" class="block py-2 hover:text-[#1E40AF]">Navigation</a>
+          <a href="forms.html" class="block py-2 hover:text-[#1E40AF]">Forms</a>
+          <a href="modals.html" class="block py-2 hover:text-[#1E40AF]">Modals</a>
+          <a href="hero-sections.html" class="block py-2 hover:text-[#1E40AF]">Hero Sections</a>
+          <a href="pricing.html" class="block py-2 hover:text-[#1E40AF]">Pricing</a>
+          <a href="testimonials.html" class="block py-2 hover:text-[#1E40AF]">Testimonials</a>
+          <a href="portfolio.html" class="block py-2 hover:text-[#1E40AF]">Portfolio</a>
+          <a href="utilities.html" class="block py-2 hover:text-[#1E40AF]">Utilities</a>
+
+        </div>
+      </li>
+
+      <li><a href="../index.html#components" class="hover:text-[#1E40AF]">Sections</a></li>
+    </ul>
+
+    <button id="mobileMenuBtn" class="md:hidden text-2xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg">
+    <ul class="flex flex-col p-6 space-y-4 text-lg">
+      <a href="../index.html">Home</a>
+      <a href="buttons.html">Buttons</a>
+      <a href="cards.html">Cards</a>
+      <a href="navigation.html">Navigation</a>
+      <a href="forms.html">Forms</a>
+      <a href="modals.html">Modals</a>
+      <a href="hero-sections.html">Hero Sections</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="utilities.html">Utilities</a>
+    </ul>
+  </div>
+</header>
+
+<div class="h-24"></div>
+
+
+
+<!-- ========================================================= -->
+<!-- PAGE HEADER -->
+<!-- ========================================================= -->
+<section class="text-center py-14">
+  <h1 class="text-5xl font-bold text-gray-900">Utilities & Design Tokens</h1>
+  <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
+    Explore the core utility classes powering this UI Kit — color system, spacing, typography, shadows, and more.
+  </p>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- MAIN WRAPPER -->
+<!-- ========================================================= -->
+<div class="max-w-7xl mx-auto px-6 md:px-12 pb-28 space-y-20">
+
+
+
+<!-- ========================================================= -->
+<!-- 1. COLOR PALETTE -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Color Palette</h2>
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+
+    <div class="p-6 rounded-xl shadow-sm bg-[#1E40AF] text-white">
+      <p>Primary</p>
+      <p class="text-sm opacity-80">#1E40AF</p>
+    </div>
+
+    <div class="p-6 rounded-xl shadow-sm bg-gray-800 text-white">
+      <p>Dark</p>
+      <p class="text-sm opacity-80">#1F2937</p>
+    </div>
+
+    <div class="p-6 rounded-xl shadow-sm bg-gray-300">
+      <p class="text-gray-800">Gray</p>
+      <p class="text-sm text-gray-600">#D1D5DB</p>
+    </div>
+
+    <div class="p-6 rounded-xl shadow-sm bg-red-500 text-white">
+      <p>Error</p>
+      <p class="text-sm opacity-80">#EF4444</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- ========================================================= -->
+<!-- 2. TYPOGRAPHY SYSTEM -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Typography</h2>
+
+  <div class="bg-white p-10 rounded-xl shadow-sm space-y-6">
+
+    <h1 class="text-5xl font-bold">Heading 1 (5xl)</h1>
+    <h2 class="text-4xl font-bold">Heading 2 (4xl)</h2>
+    <h3 class="text-3xl font-semibold">Heading 3 (3xl)</h3>
+    <h4 class="text-2xl font-semibold">Heading 4 (2xl)</h4>
+    <h5 class="text-xl font-semibold">Heading 5 (xl)</h5>
+    <h6 class="text-lg font-semibold">Heading 6 (lg)</h6>
+
+    <p class="text-base text-gray-600">Body text (base)</p>
+    <p class="text-sm text-gray-500">Small text (sm)</p>
+    <p class="text-xs text-gray-400">Extra small text (xs)</p>
+
+  </div>
+</section>
+
+
+
+
+<!-- ========================================================= -->
+<!-- 3. SPACING SYSTEM -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Spacing Utilities</h2>
+
+  <div class="space-y-6">
+
+    <div class="space-y-2">
+      <p class="font-medium">Padding</p>
+      <div class="flex flex-wrap gap-4">
+        <div class="bg-white p-4 shadow rounded-xl">p-4</div>
+        <div class="bg-white p-6 shadow rounded-xl">p-6</div>
+        <div class="bg-white p-10 shadow rounded-xl">p-10</div>
+      </div>
+    </div>
+
+    <div class="space-y-2">
+      <p class="font-medium">Margin</p>
+      <div class="flex flex-wrap gap-4">
+        <div class="bg-white m-4 p-4 shadow rounded-xl">m-4</div>
+        <div class="bg-white m-6 p-4 shadow rounded-xl">m-6</div>
+        <div class="bg-white mt-10 p-4 shadow rounded-xl">mt-10</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- ========================================================= -->
+<!-- 4. BORDER & RADIUS -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Border & Radius</h2>
+
+  <div class="bg-white p-10 rounded-xl shadow-sm grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+
+    <div class="border border-gray-300 p-6 text-center rounded-md">rounded-md</div>
+    <div class="border border-gray-300 p-6 text-center rounded-xl">rounded-xl</div>
+    <div class="border border-gray-300 p-6 text-center rounded-2xl">rounded-2xl</div>
+    <div class="border border-gray-300 p-6 text-center rounded-full">rounded-full</div>
+
+  </div>
+</section>
+
+
+
+
+<!-- ========================================================= -->
+<!-- 5. SHADOWS -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Shadows</h2>
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+
+    <div class="bg-white p-6 rounded-xl shadow-sm">shadow-sm</div>
+    <div class="bg-white p-6 rounded-xl shadow">shadow</div>
+    <div class="bg-white p-6 rounded-xl shadow-lg">shadow-lg</div>
+    <div class="bg-white p-6 rounded-xl shadow-2xl">shadow-2xl</div>
+
+  </div>
+</section>
+
+
+
+
+<!-- ========================================================= -->
+<!-- 6. GRID & FLEX UTILITIES -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Grid & Flex</h2>
+
+  <div class="grid md:grid-cols-2 gap-10">
+
+    <div class="bg-white p-6 rounded-xl shadow">
+      <p class="font-semibold mb-4">Flexbox</p>
+      <div class="flex gap-3">
+        <div class="bg-[#1E40AF] text-white p-3 rounded">1</div>
+        <div class="bg-[#1E40AF] text-white p-3 rounded">2</div>
+        <div class="bg-[#1E40AF] text-white p-3 rounded">3</div>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow">
+      <p class="font-semibold mb-4">Grid</p>
+      <div class="grid grid-cols-3 gap-3">
+        <div class="bg-gray-200 p-3 rounded">A</div>
+        <div class="bg-gray-200 p-3 rounded">B</div>
+        <div class="bg-gray-200 p-3 rounded">C</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- ========================================================= -->
+<!-- 7. DISPLAY & VISIBILITY -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Display & Visibility</h2>
+
+  <div class="bg-white p-10 rounded-xl shadow-sm space-y-4">
+
+    <div class="block bg-gray-200 p-3 rounded">block</div>
+    <div class="inline bg-gray-200 px-3 py-1 rounded">inline</div>
+    <div class="inline-block bg-gray-200 px-3 py-1 rounded">inline-block</div>
+
+    <div class="hidden md:block bg-gray-200 p-3 rounded">
+      hidden on mobile, visible on md+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ========================================================= -->
+<!-- 8. BACKGROUNDS & GRADIENTS -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Backgrounds & Gradients</h2>
+
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="p-10 rounded-xl shadow bg-gradient-to-r from-blue-600 to-blue-400 text-white">
+      Gradient Blue
+    </div>
+
+    <div class="p-10 rounded-xl shadow bg-gradient-to-r from-purple-600 to-pink-500 text-white">
+      Gradient Purple/Pink
+    </div>
+
+    <div class="p-10 rounded-xl shadow bg-gradient-to-r from-gray-700 to-gray-500 text-white">
+      Gradient Gray
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- ========================================================= -->
+<!-- 9. ANIMATIONS -->
+<!-- ========================================================= -->
+<section>
+  <h2 class="text-3xl font-semibold mb-6">Animations</h2>
+
+  <div class="grid md:grid-cols-3 gap-10">
+
+    <div class="bg-white p-10 rounded-xl shadow text-center hover:scale-105 transition">
+      Scale on Hover
+    </div>
+
+    <div class="bg-white p-10 rounded-xl shadow text-center hover:-translate-y-2 transition">
+      Lift on Hover
+    </div>
+
+    <div class="bg-white p-10 rounded-xl shadow text-center hover:bg-gray-100 transition">
+      Background Fade
+    </div>
+
+  </div>
+</section>
+
+
+
+</div> <!-- END WRAPPER -->
+
+
+
+<!-- ========================================================= -->
+<!-- FOOTER -->
+<!-- ========================================================= -->
+<footer class="py-10 bg-white border-t border-gray-200 text-center">
+  <p class="text-gray-600">&copy; <span id="year"></span> UI Component Library. All rights reserved.</p>
+</footer>
+
+
+
+<!-- JS -->
+<script src="../assets/script.js"></script>
+
+</body>
+</html>
